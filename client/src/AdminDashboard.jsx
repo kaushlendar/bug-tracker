@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import './AdminDashboard.css';
 
-const API = 'http://localhost:5000/api/admin';
+const API = 'https://bug-tracker-5y8m.onrender.com/api/admin';
 
 function AdminDashboard({ onBack }) {
   const [stats, setStats] = useState({});

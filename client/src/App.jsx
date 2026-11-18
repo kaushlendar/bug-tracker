@@ -116,9 +116,9 @@ const totalPages = Math.ceil(
       if (!token) return;
 
       try {
-        const response = await fetch(
-          'http://localhost:5000/api/issues',
-          {
+const response = await fetch(
+  'https://bug-tracker-5y8m.onrender.com/api/issues',
+  {
             headers: {
               Authorization: `Bearer ${token}`
             }
@@ -153,9 +153,9 @@ const totalPages = Math.ceil(
     try {
       const endpoint = isLogin ? 'login' : 'register';
 
-      const response = await fetch(
-        `http://localhost:5000/api/auth/${endpoint}`,
-        {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/auth/${endpoint}`,
+  {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -208,9 +208,9 @@ const totalPages = Math.ceil(
     const token = localStorage.getItem('token');
 
     try {
-      const response = await fetch(
-        'http://localhost:5000/api/issues',
-        {
+const response = await fetch(
+  'https://bug-tracker-5y8m.onrender.com/api/issues',
+  {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -253,9 +253,9 @@ const handleUpdateIssue = async (issueId, newStatus) => {
   const token = localStorage.getItem('token');
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}`,
+  {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -301,9 +301,9 @@ const handleSaveEdit = async (e) => {
   const token = localStorage.getItem('token');
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${editingIssue}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${editingIssue}`,
+  {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -349,9 +349,9 @@ const handleDeleteIssue = async (issueId) => {
   const token = localStorage.getItem('token');
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}`,
+  {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`
@@ -386,9 +386,9 @@ const handleAddComment = async (issueId) => {
   try {
     const token = localStorage.getItem('token');
 
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}/comments`,
-      {
+ const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}/comments`,
+  {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -24,9 +24,9 @@ function ProfileSettings({ user, onBack }) {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await fetch(
-        'http://localhost:5000/api/auth/profile',
-        {
+const response = await fetch(
+  'https://bug-tracker-5y8m.onrender.com/api/auth/profile',
+  {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -61,9 +61,9 @@ function ProfileSettings({ user, onBack }) {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await fetch(
-        'http://localhost:5000/api/auth/change-password',
-        {
+const response = await fetch(
+  'https://bug-tracker-5y8m.onrender.com/api/auth/change-password',
+  {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

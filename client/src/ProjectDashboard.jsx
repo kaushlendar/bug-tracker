@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import './ProjectDashboard.css';
 
-const API_URL = 'http://localhost:5000/api/projects';
+const API_URL = 'https://bug-tracker-5y8m.onrender.com/api/projects';
 
 function ProjectDashboard({ onBack }) {
   const [projects, setProjects] = useState([]);
@@ -62,9 +62,9 @@ const [issueComments, setIssueComments] = useState({});
   // Fetch Issues of Selected Project
 const fetchProjectIssues = async (projectId) => {
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues?project=${projectId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues?project=${projectId}`,
+  {
         headers: getHeaders()
       }
     );
@@ -95,7 +95,9 @@ const handleCreateIssue = async (e) => {
   }
 
   try {
-    const response = await fetch('http://localhost:5000/api/issues', {
+    const response = await fetch(
+  'https://bug-tracker-5y8m.onrender.com/api/issues',
+  {
       method: 'POST',
       headers: getHeaders(),
       body: JSON.stringify({
@@ -126,9 +128,9 @@ const handleCreateIssue = async (e) => {
 // Update Issue Status
 const handleUpdateIssueStatus = async (issueId, status) => {
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}`,
+  {
         method: 'PUT',
         headers: getHeaders(),
         body: JSON.stringify({ status })
@@ -157,9 +159,9 @@ const handleDeleteIssue = async (issueId) => {
   if (!confirmDelete) return;
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}`,
+  {
         method: 'DELETE',
         headers: getHeaders()
       }
@@ -186,9 +188,9 @@ const handleAddComment = async (issueId) => {
   }
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}/comments`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}/comments`,
+  {
         method: 'POST',
         headers: getHeaders(),
         body: JSON.stringify({ text: commentText })
@@ -220,9 +222,9 @@ const handleDeleteComment = async (issueId, commentId) => {
   }
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}/comments/${commentId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}/comments/${commentId}`,
+  {
         method: 'DELETE',
         headers: getHeaders()
       }
@@ -250,9 +252,9 @@ const handleEditIssue = (issue) => {
 
 const handleUpdateIssue = async (issueId) => {
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/issues/${issueId}`,
-      {
+const response = await fetch(
+  `https://bug-tracker-5y8m.onrender.com/api/issues/${issueId}`,
+  {
         method: 'PUT',
         headers: getHeaders(),
         body: JSON.stringify({
