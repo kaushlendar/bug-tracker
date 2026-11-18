@@ -1,0 +1,177 @@
+
+/* Profile Settings Dashboard */
+.issue-details {
+  max-width: 1050px;
+  margin: 25px auto;
+  padding: 30px;
+  background: #f4f7fc;
+  border-radius: 18px;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+/* Back Button */
+.issue-details > button.add-btn {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.issue-details > button.add-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Main Heading */
+.issue-details > h2 {
+  text-align: center;
+  font-size: 27px;
+  margin: 0 0 28px;
+  color: #172554;
+}
+
+/* Settings Cards */
+.issue-details form,
+.issue-details > .activity-item {
+  margin-bottom: 20px;
+}
+
+.issue-details .activity-item {
+  background: #fff;
+  padding: 28px;
+  border: 1px solid #e5eaf2;
+  border-left: 5px solid #2563eb;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+  box-sizing: border-box;
+}
+
+.issue-details .activity-item h3 {
+  font-size: 20px;
+  color: #1e293b;
+  text-align: center;
+  margin: 5px 0 25px;
+}
+
+/* Labels */
+.issue-details .activity-item label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin: 15px 0 8px;
+}
+
+/* Input Fields */
+.issue-details .activity-item input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 14px;
+  color: #172033;
+  outline: none;
+  transition: 0.2s;
+}
+
+.issue-details .activity-item input:focus {
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Action Buttons */
+.issue-details .activity-item button.add-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.issue-details .activity-item button.add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Messages */
+.issue-details .activity-item p {
+  color: #475569;
+  font-size: 14px;
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* Account Settings */
+.issue-details > .activity-item:last-child p {
+  padding: 12px 15px;
+  margin: 8px 0;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .issue-details {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  .issue-details > h2 {
+    font-size: 22px;
+  }
+
+  .issue-details .activity-item {
+    padding: 18px;
+  }
+}
+
+/* Profile Settings Width Improvement */
+.issue-details {
+  width: 100%;
+  max-width: 1050px;
+  margin: 25px auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.issue-details .activity-item {
+  width: 100%;
+}
+
+.issue-details .activity-item input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Better Desktop Layout */
+@media (min-width: 768px) {
+  .issue-details form {
+    width: 100%;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+  .issue-details {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 15px;
+  }
+}
